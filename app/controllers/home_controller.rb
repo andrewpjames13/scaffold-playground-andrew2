@@ -1,10 +1,11 @@
 class HomeController < ApplicationController
 
   def index
-    peoplellist = Person.new
+    @peoplelist = Person.all
 
-    orglist = Orginization.new
+    @orglist = Orginization.all
 
-    @people_orginizations = [peoplelist, orglist]
+    @alienlist = Alien.all
+
   end
 end

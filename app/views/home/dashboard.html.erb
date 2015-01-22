@@ -1,7 +1,0 @@
-<p class="lead">Welcome to your homepage</p>
-
-<% @people_orginizations.each do |q| %>
-<p id="<%= q.slug %>"><h3><%= q.question %></h3></p>
-<p><%= q.answer %></p>
-<%= link_to "top", "#top" %>
-<% end %>
