@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @alien.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @alien.last_name %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @alien.date_of_birth %>
+</p>
+
+<%= link_to 'Edit', edit_alien_path(@alien) %> |
+<%= link_to 'Back', aliens_path %>
