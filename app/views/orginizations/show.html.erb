@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @orginization.name %>
+</p>
+
+<p>
+  <strong>Number of employees:</strong>
+  <%= @orginization.number_of_employees %>
+</p>
+
+<%= link_to 'Edit', edit_orginization_path(@orginization) %> |
+<%= link_to 'Back', orginizations_path %>

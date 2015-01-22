@@ -1,0 +1,27 @@
+<h1>Listing orginizations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number of employees</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orginizations.each do |orginization| %>
+      <tr>
+        <td><%= orginization.name %></td>
+        <td><%= orginization.number_of_employees %></td>
+        <td><%= link_to 'Show', orginization %></td>
+        <td><%= link_to 'Edit', edit_orginization_path(orginization) %></td>
+        <td><%= link_to 'Destroy', orginization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Orginization', new_orginization_path %>

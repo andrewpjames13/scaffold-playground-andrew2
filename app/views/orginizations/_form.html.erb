@@ -1,0 +1,25 @@
+<%= form_for(@orginization) do |f| %>
+  <% if @orginization.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@orginization.errors.count, "error") %> prohibited this orginization from being saved:</h2>
+
+      <ul>
+      <% @orginization.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_employees %><br>
+    <%= f.number_field :number_of_employees %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
